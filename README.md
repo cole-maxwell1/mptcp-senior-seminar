@@ -1,43 +1,13 @@
-# UMM CSci Senior seminar templates
+# Cole's Senior Seminar
 
-LaTeX templates for University of Minnesota, Morris, Computer Science senior seminar proceedings and presentations.
+This is the $\LaTeX$ source for my college Senior Seminar paper. During this course, a student writes a 5-6 page paper, in the Association for Computing Machinery (ACM) style, that is an overview of recent peer-reviewed computer science publications on a topic of their choice. The student presents the paper as a 25-minute conference-style presentation for faculty, fellow students, alumni, and others. The student needs to demonstrate an in-depth understanding of their topic by writing a clear paper that summarizes (in the student’s own words) the material that they learned from their sources and clearly presenting it, including the ability to answer questions on the material.
 
-There are three main components here:
-* ```Annotated_bibliography``` has ```annotated_bibliography.tex``` and ```annotated_bibliography.bib```, which provide an example of using LaTeX and BibTeX to generate an annotated bibliography.
-* ```Sample_paper``` has ```sample_paper.tex``` along with a figure and a BibTeX file provide an example of using LaTeX and BibTeX to generate a basic paper.
-* ```Sample_talk``` has ```Sample_talk.tex``` along with a number of photographs and PDF figures provide an example of using LaTeX and the Beamer package to generate a set of slides.
+My paper is based in large part on the 2018 paper ["*A Dynamic Packet Scheduling Method for Multipath TCP in Heterogeneous Wireless Networks*"](https://ieeexplore.ieee.org/document/8600179/) by Guannan Xie, Huifang Chen, Lei Xie, and Kuang Wang.
 
-Both the annotated bibliography and the sample paper use ```sig-alternate.cls```, which is our modified version of the [ACM sig-alternate document class](http://www.acm.org/sigs/publications/proceedings-templates). The primary changes we've made to the ACM document class and examples are:
-* Replaced the copyright notice with a Creative Commons license.
-* Removed the ACM document fees.
-* Removed the terms and categories, which seem to really just be confusing relic of a pre-search-engine era.
-* Simplified the examples somewhat, removing features such as multiple authors that we're not likely to use.
-* "Forced" the paper size to US Letter (8.5 by 11 inches). This is useful because tools like TexMaker default to A4, and this overrides that.
+# Abstract 
 
-Since the annotated bibliography example and the sample paper both use ```sig-alternate.cls```, we have a link to it in the annotated bibliography folder instead of a second copy. This will hopefully make it easier to ensure that we don't end up with two different versions out there with slightly different behaviors.
+Today many devices contain hardware to transmit data across the internet via cellular, WiFi, and wired connections. Many of these devices communicate by using a protocol known as Transmission Control Protocol (TCP).  TCP was developed when network resources were expensive, and it was rare for a typical network-aware device to have more than one connection to a network.  An extension to TCP known as Multipath TCP (MPTCP) was developed to leverage the multiple network connections to which devices now have access. While the MPTCP extension has been successful in its goal of using multiple network connections to send data simultaneously, MPTCP presents new challenges. Scheduling data to be sent across multiple network connections with varying network conditions can result in data arriving out of order, adding increased system overhead and network latency. This paper presents the challenges of MPTCP packet scheduling and summarizes a proposed solution that has been found to increase performance over existing MPTCP scheduling methods.
 
-## Using LaTeX
+# Acknowledgements
 
-We have LaTeX and the TeXMaker GUI installed in the lab, so you should be able to clone a copy of your repo and work in the lab without any problems.
-
-If you want to install LaTeX on your own computer(s), there are a variety of tools you can use. Be prepared, though, for a quite substantial download; the full LaTeX install is very large (currently 2.5GB – there are lots of tools, libraries, fonts, etc.) and can take a while even on the University network (I don't think the server on the other end is very fast).
-
-You could do the whole thing on the command line with editors like emacs or vim, but there are a number of more WYSIWYG LaTeX GUIs worth considering:
-
- - [TexMaker](http://www.xm1math.net/texmaker/) (what we have in the lab)
- - [TexStudio](http://www.texstudio.org/) (similar to TexMaker)
- - [LyX](http://www.lyx.org/)
- - [TexShop](http://pages.uoregon.edu/koch/texshop/) (Mac specific)
-
-There are also some on-line, cloud-based solutions for folks that prefer that route:
-
- - [ShareLaTeX](https://www.sharelatex.com/)
- - [Overleaf](https://www.overleaf.com/)
- 
-These are freemium, and some of the pay features would be pretty useful, so that's an issue to consider. They also don't necessary interact beautifully with `git`, so it you and your advisor want to use `git`/Github, then that's a concern.
-
-## Some notes on LaTeX
-
-**Run LaTeX _and_ BibTeX.** To fully build a LaTeX document you have to run LaTeX (sometimes twice – long story), then run BibTex, and then run LaTeX _again_. This is tedious and annoying, and a holdover from the early days of TeX/LaTeX when computers had very little memory. _Some_ GUI tools like TexStudio try to be "smart" and automatically (re)run things when necessary, but that doesn't always work, and sometimes you still have to re-run things there to get a complete build.
-
-**Make sure you use PdfLatex instead of "plain" LaTeX.** The story here is long and complex, but "plain" LaTeX assumes that (a) all your figures are in PostScript and (b) you want your output in DVI format (instead of PDF). Neither of these assumptions have been likely true in over a decade, and PdfLatex makes more "modern" assumptions that your figures are PDFs and that you want our output to be PDF. So when we say "run LaTeX", we really mean "run PdfLaTeX" in most settings.
+I would like to thank my advisor [Peter Dolan, Ph.D.](https://academics.morris.umn.edu/peter-dolan) for providing outstanding feedback and guidance throughout the research and writing of this paper. I also want to thank [Kristin Lamberty, Ph.D](https://academics.morris.umn.edu/kristin-lamberty) for facilitating the senior seminar process and [Kevin Arhelger](https://www.linkedin.com/in/kevarh/) for his professional review and feedback.
